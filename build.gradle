@@ -37,3 +37,12 @@ dependencyManagement {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
+
+task stage() {
+	dependsOn build
+}
+
+bootJar {
+	baseName = 'tempvs-discovery'
+	version =  project.version
+}
