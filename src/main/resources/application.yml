@@ -1,7 +1,5 @@
 server:
   port: ${PORT:8084}
-  ssl:
-    enabled: false
 security:
   user:
     password: ${eureka.password}
