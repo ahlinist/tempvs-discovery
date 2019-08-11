@@ -27,6 +27,12 @@ ext {
 }
 
 dependencies {
+	//java 11 workaround
+	implementation "javax.xml.bind:jaxb-api:2.2.11"
+	implementation "com.sun.xml.bind:jaxb-core:2.2.11"
+	implementation "com.sun.xml.bind:jaxb-impl:2.2.11"
+	implementation "javax.activation:activation:1.1.1"
+	//eureka
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
