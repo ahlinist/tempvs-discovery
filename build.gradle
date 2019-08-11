@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.4.RELEASE'
+		springBootVersion = '2.1.7.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -16,14 +16,14 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'club.tempvs'
 version = '1.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
 }
 
 ext {
-	set('springCloudVersion', 'Greenwich.SR1')
+	set('springCloudVersion', 'Greenwich.SR2')
 }
 
 dependencies {
@@ -37,11 +37,7 @@ dependencyManagement {
 	}
 }
 
-task stage() {
-	dependsOn build
-}
-
 bootJar {
-	baseName = 'tempvs-discovery'
-	version =  project.version
+	archiveBaseName = 'tempvs-discovery'
+	version = ''
 }
